@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Assignment</title>
+    <link rel="stylesheet" href="./task2.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <!-- Task 1: Welcome Message (without parameters) -->
+        <h2 id="welcomeHeading">Welcome</h2>
+        <p id="iifeBanner" class="sub-banner"></p>
+    </header>
+
+    <main class="main-container">
+
+        <!-- Task 2: Show Customer Name on Click -->
+        <div class="task-card">
+            <h3>Task 2: Customer Greeting on Click</h3>
+            <div class="input-group">
+                <input type="text" id="custNameInput" placeholder="Enter customer name">
+                <button onclick="handleShowCustomerName()">Greet Customer</button>
+            </div>
+            <div id="customerGreetingResult" class="output-box"></div>
+        </div>
+
+        <!-- Task 3: Calculate Square of a Number -->
+        <div class="task-card">
+            <h3>Task 3: Calculate Square of a Number</h3>
+            <div class="input-group">
+                <input type="number" id="squareInput" placeholder="Enter number">
+                <button onclick="handleSquareCalculation()">Calculate Square</button>
+            </div>
+            <div id="squareResult" class="output-box"></div>
+        </div>
+
+        <!-- Task 4 & 5: Product with Default Price & Default Name Greeting -->
+        <div class="task-card">
+            <h3>Task 4 & 5: Default Parameters Demonstration</h3>
+            <div class="button-group">
+                <button onclick="displayProductAndPrice('Coffee Mug')">Product (Default Price)</button>
+                <button onclick="displayProductAndPrice('Wireless Mouse', 450)">Product (Custom Price: ₹450)</button>
+                <button onclick="greetUser()">Greet (No Name Passed)</button>
+                <button onclick="greetUser('Alex')">Greet ("Alex")</button>
+            </div>
+            <div id="defaultDemoResult" class="output-box"></div>
+        </div>
+
+        <!-- Task 6: Dynamic Item Billing -->
+        <div class="task-card">
+            <h3>Task 6: Dynamic Item Billing</h3>
+            <div class="input-group">
+                <input type="text" id="billItemName" placeholder="Item Name (e.g. Pizza)">
+                <input type="number" id="billQty" placeholder="Quantity" min="1">
+                <input type="number" id="billPrice" placeholder="Price per unit (₹)" min="1">
+                <button onclick="handleItemBilling()">Calculate Bill</button>
+            </div>
+            <div id="billingResult" class="output-box"></div>
+        </div>
+
+        <!-- Task 7: Multi-Button Dynamic Menu Generator -->
+        <div class="task-card">
+            <h3>Task 7: Multi-Button Menu Generator (Same Function with Parameters)</h3>
+            <div class="button-group">
+                <button onclick="showMenuItem('Paneer Butter Masala', 240)">Paneer Butter Masala</button>
+                <button onclick="showMenuItem('Veg Biryani', 180)">Veg Biryani</button>
+                <button onclick="showMenuItem('Cold Coffee', 90)">Cold Coffee</button>
+            </div>
+            <div id="menuResult" class="output-box"></div>
+        </div>
+
+        <!-- Task 8: Smart Discount Calculator with Defaults -->
+        <div class="task-card">
+            <h3>Task 8: Smart Discount Calculator (Default = 10%)</h3>
+            <div class="input-group">
+                <input type="number" id="discountAmount" placeholder="Amount (₹)">
+                <input type="number" id="discountPercent" placeholder="Discount % (Optional)">
+                <button onclick="handleDiscountCalculation()">Calculate Final Price</button>
+            </div>
+            <div id="discountResult" class="output-box"></div>
+        </div>
+
+        <!-- Task 9: Dynamic Summary Card Generator -->
+        <div class="task-card">
+            <h3>Task 9: Dynamic Summary Card Generator</h3>
+            <div class="input-group">
+                <input type="text" id="sumCustName" placeholder="Customer Name">
+                <input type="text" id="sumItemName" placeholder="Item Name">
+                <input type="number" id="sumQty" placeholder="Quantity">
+                <input type="number" id="sumPrice" placeholder="Unit Price (₹)">
+                <button onclick="handleSummaryCard()">Generate Card</button>
+            </div>
+            <div id="summaryCardContainer"></div>
+        </div>
+
+        <!-- Task 10: Interactive Quantity Updater with Live Total -->
+        <div class="task-card">
+            <h3>Task 10: Interactive Quantity Updater (Live Total)</h3>
+            <div class="counter-box">
+                <div class="item-info">
+                    <h4>Classic Burger</h4>
+                    <p>Unit Price: ₹<span id="unitPriceDisplay">150</span></p>
+                </div>
+                <div class="counter-controls">
+                    <button class="qty-btn" onclick="updateQuantity(-1)">-</button>
+                    <span id="currentQty" class="qty-number">1</span>
+                    <button class="qty-btn" onclick="updateQuantity(1)">+</button>
+                </div>
+                <div id="liveTotalContainer" class="live-total"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./task2.js"></script>
+</body>
+</html>
