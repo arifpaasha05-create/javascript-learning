@@ -26,6 +26,9 @@ use cases : login ,logout
 
 we cant able to store 5 mb
 
+
+
+
 */
 localStorage.setItem("key",100);
 localStorage.setItem("key1",101);
